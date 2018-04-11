@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import InputSource from './components/InputSource';
-import Player from './components/Player';
+import Player from './containers/Player';
+import AudioDisplay from './containers/AudioDisplay';
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class App extends Component {
       <div>
         <InputSource onChange={this.onSelect} />
         <Player audioUrl={this.state.audioUrl} />
+        <AudioDisplay />
       </div>
     );
   }
