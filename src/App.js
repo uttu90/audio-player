@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InputSource from './components/InputSource';
+import AudioPlayer from './components/AudioPlayer';
 import Player from './containers/Player';
 import AudioDisplay from './containers/AudioDisplay';
 
@@ -18,8 +19,7 @@ class App extends Component {
     return (
       <div>
         <InputSource onChange={this.onSelect} />
-        <Player audioUrl={this.state.audioUrl} />
-        <AudioDisplay />
+        <AudioPlayer src={this.state.audioUrl}/>
       </div>
     );
   }
